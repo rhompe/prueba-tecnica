@@ -36,8 +36,8 @@ const Dashboard = () => {
           <h1 className="dashboard-banner-title">¡Bienvenido de nuevo!</h1>
         </div>
 
-        {/* Quick Actions */}
         <div className="dashboard-content">
+          {/* Quick Actions */}
           <div className="dashboard-actions">
             {accionesRapidas.map((accion) => {
               const IconComponent = getIconComponent(accion.icono);
@@ -58,19 +58,26 @@ const Dashboard = () => {
             })}
           </div>
 
-          {/* Stats Cards Row */}
-          <div className="dashboard-stats-row">
-            <StatsCards estadisticas={estadisticas} />
-          </div>
+          {/* GRID PRINCIPAL: 2 Columnas (2/3 izquierda + 1/3 derecha) */}
+          <div className="dashboard-main-grid">
+            
+            {/* COLUMNA IZQUIERDA (2/3) */}
+            <div className="dashboard-left-column">
+              {/* Stats Cards (1/4 + 1/4 + 2/4) */}
+              <div className="dashboard-stats-row">
+                <StatsCards estadisticas={estadisticas} />
+              </div>
 
-          {/* Right Column: Calendar and Recent Files */}
-          <div className="dashboard-right-column">
-            <CalendarWidget reuniones={reuniones} />
-            <RecentFiles archivos={archivosRecientes} />
-          </div>
+              {/* Tareas Pendientes */}
+              <TasksTable tareas={tareasPendientes} />
+            </div>
 
-          {/* Tasks Table */}
-          <TasksTable tareas={tareasPendientes} />
+            {/* COLUMNA DERECHA (1/3) */}
+            <div className="dashboard-right-column">
+              <CalendarWidget reuniones={reuniones} />
+              <RecentFiles archivos={archivosRecientes} />
+            </div>
+          </div>
         </div>
       </div>
     </div>
