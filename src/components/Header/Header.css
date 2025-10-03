@@ -1,0 +1,130 @@
+.header {
+  background-color: white;
+  border-bottom: 1px solid var(--color-gray-200);
+  padding: 1rem 2rem;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-date {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.header-search {
+  position: relative;
+}
+
+.header-search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-gray-400);
+}
+
+.header-search input {
+  padding: 0.5rem 1rem 0.5rem 2.5rem;
+  border: 1px solid var(--color-gray-300);
+  border-radius: 0.5rem;
+  width: 320px;
+  font-size: 0.875rem;
+  outline: none;
+}
+
+.header-search input:focus {
+  border-color: var(--color-blue-600);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-icon {
+  color: var(--color-gray-600);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.header-icon:hover {
+  color: var(--color-gray-800);
+}
+
+.header-language {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.header-user {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.header-user-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.header-user-avatar {
+  width: 32px;
+  height: 32px;
+  background-color: var(--color-gray-300);
+  border-radius: 50%;
+}
+
+/* TABLET - Header fijo */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .header-content {
+    padding: 0;
+  }
+
+  .header-search input {
+    width: 240px;
+  }
+}
+
+/* MÓVIL - Header fijo también */
+@media (max-width: 768px) {
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0.75rem 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .header-search input {
+    width: 180px;
+  }
+
+  .header-user-name {
+    display: none;
+  }
+}

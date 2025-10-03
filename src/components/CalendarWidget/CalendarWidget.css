@@ -1,0 +1,102 @@
+.calendar-widget {
+  background-color: white;
+  border-radius: 0.75rem;
+  border: 1px solid var(--color-slate-800);
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.calendar-title {
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: var(--color-slate-800);
+}
+
+.calendar-button {
+  padding: 0.375rem 0.75rem;
+  background-color: var(--color-slate-800);
+  color: white;
+  font-size: 0.75rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: background-color 0.2s;
+}
+
+.calendar-button:hover {
+  background-color: var(--color-slate-900);
+}
+
+.calendar-content {
+  padding: 1rem 1.25rem 1.25rem;
+}
+
+.calendar-count {
+  font-size: 0.75rem;
+  color: var(--color-gray-500);
+  margin-bottom: 1rem;
+}
+
+.calendar-events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.calendar-event-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.calendar-event-time {
+  font-size: 0.75rem;
+  color: var(--color-gray-600);
+  font-weight: 500;
+  min-width: 50px;
+  padding-top: 0.75rem;
+  flex-shrink: 0;
+}
+
+.calendar-event-content {
+  flex: 1;
+  background-color: white;
+  border: 1px solid var(--color-gray-200);
+  border-radius: 0.5rem;
+  padding: 0.875rem 1rem;
+  transition: all 0.2s;
+}
+
+.calendar-event-content:hover {
+  border-color: var(--color-gray-300);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.calendar-event-content.active {
+  background-color: #e2e8f0;
+  border: 2px solid var(--color-slate-800);
+  box-shadow: 0 2px 4px rgba(30, 41, 59, 0.1);
+  padding: 0.8125rem 0.9375rem;
+}
+
+.calendar-event-title {
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  color: var(--color-gray-900);
+  font-weight: 500;
+}
+
+.calendar-event-case {
+  font-size: 0.7rem;
+  color: var(--color-gray-500);
+  margin-top: 0.35rem;
+}

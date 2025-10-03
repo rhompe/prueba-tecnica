@@ -1,0 +1,171 @@
+{
+  "usuario": {
+    "nombre": "Miguel Serrano",
+    "idioma": "ESP"
+  },
+  "estadisticas": {
+    "totalCasos": 30,
+    "casosActivos": "Activos en Marzo",
+    "totalReuniones": 3,
+    "reunionesHoy": "Hoy",
+    "proximaReunion": {
+      "nombre": "Nombre de la reunión",
+      "codigo": "ABCDE, 123",
+      "tiempoRestante": "00:35"
+    }
+  },
+  "tareasPendientes": [
+    {
+      "id": 1,
+      "nombre": "Nombre de la actividad ABCDE, 123",
+      "status": "Urgente",
+      "fechaLimite": "Mié, 26 marzo",
+      "tiempoDedicado": "2 hrs"
+    },
+    {
+      "id": 2,
+      "nombre": "Nombre de la actividad ABCDE, 123",
+      "status": "Urgente",
+      "fechaLimite": "Mié, 26 marzo",
+      "tiempoDedicado": "2 hrs"
+    },
+    {
+      "id": 3,
+      "nombre": "Nombre de la actividad ABCDE, 123",
+      "status": "Urgente",
+      "fechaLimite": "Mié, 26 marzo",
+      "tiempoDedicado": "2 hrs"
+    },
+    {
+      "id": 4,
+      "nombre": "Nombre de la actividad ABCDE, 123",
+      "status": "Urgente",
+      "fechaLimite": "Mié, 26 marzo",
+      "tiempoDedicado": "2 hrs"
+    },
+    {
+      "id": 5,
+      "nombre": "Nombre de la actividad ABCDE, 123",
+      "status": "Urgente",
+      "fechaLimite": "Mié, 26 marzo",
+      "tiempoDedicado": "2 hrs"
+    },
+    {
+      "id": 6,
+      "nombre": "Nombre de la actividad ABCDE, 123",
+      "status": "Urgente",
+      "fechaLimite": "Mié, 26 marzo",
+      "tiempoDedicado": "2 hrs"
+    },
+    {
+      "id": 7,
+      "nombre": "Nombre de la actividad ABCDE, 123",
+      "status": "Urgente",
+      "fechaLimite": "Mié, 26 marzo",
+      "tiempoDedicado": "2 hrs"
+    }
+  ],
+  "reuniones": [
+    {
+      "id": 1,
+      "hora": "16:00",
+      "titulo": "Sesión Inicial de Consulta / Estrategia de Caso",
+      "caso": "PQP #00000022"
+    },
+    {
+      "id": 2,
+      "hora": "17:00",
+      "titulo": "Mesa Redonda de Mejora Continua",
+      "caso": null
+    },
+    {
+      "id": 3,
+      "hora": "19:00",
+      "titulo": "",
+      "caso": null
+    },
+    {
+      "id": 4,
+      "hora": "19:30",
+      "titulo": "Conferencia de Arbitraje Legal",
+      "caso": null
+    },
+    {
+      "id": 5,
+      "hora": "20:00",
+      "titulo": "",
+      "caso": null
+    }
+  ],
+  "archivosRecientes": [
+    {
+      "id": 1,
+      "nombre": "Contrato de Servicios Legal.docx",
+      "tamano": "2.7 MB",
+      "fecha": "de Enero 13/03",
+      "tipo": "word"
+    },
+    {
+      "id": 2,
+      "nombre": "Demanda Civil Caso 2024.docx",
+      "tamano": "1.5 MB",
+      "fecha": "de Febrero 20/03",
+      "tipo": "word"
+    },
+    {
+      "id": 3,
+      "nombre": "Evidencia Digital.pdf",
+      "tamano": "5.2 MB",
+      "fecha": "de Marzo 05/03",
+      "tipo": "pdf"
+    },
+    {
+      "id": 4,
+      "nombre": "Informe Financiero.xlsx",
+      "tamano": "890 KB",
+      "fecha": "de Marzo 10/03",
+      "tipo": "excel"
+    },
+    {
+      "id": 5,
+      "nombre": "Sentencia Apelación.pdf",
+      "tamano": "3.1 MB",
+      "fecha": "de Marzo 15/03",
+      "tipo": "pdf"
+    }
+  ],
+  "accionesRapidas": [
+    {
+      "id": 1,
+      "texto": "Nuevo Caso",
+      "icono": "scale",
+      "destacado": true
+    },
+    {
+      "id": 2,
+      "texto": "Audiencia",
+      "icono": "video"
+    },
+    {
+      "id": 3,
+      "texto": "Reunión",
+      "icono": "laptop",
+      "destacado": false
+    },
+    {
+      "id": 4,
+      "texto": "Documento",
+      "icono": "file-text"
+    },
+    {
+      "id": 5,
+      "texto": "Tarea",
+      "icono": "file-check"
+    },
+    {
+      "id": 6,
+      "texto": "Miembro",
+      "icono": "users"
+    }
+  ]
+}

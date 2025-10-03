@@ -1,0 +1,124 @@
+.recent-files {
+  background-color: white;
+  border-radius: 0.75rem;
+  border: 1px solid var(--color-slate-800);
+}
+
+.recent-files-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.recent-files-title {
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: var(--color-slate-800);
+}
+
+.recent-files-view-all {
+  font-size: 0.75rem;
+  color: var(--color-gray-600);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.recent-files-view-all:hover {
+  color: var(--color-gray-800);
+}
+
+.recent-files-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.recent-file-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.recent-file-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 0.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.recent-file-icon.word {
+  background-color: #2B579A;
+}
+
+.recent-file-icon.pdf {
+  background-color: #E03E2D;
+}
+
+.recent-file-icon.excel {
+  background-color: #217346;
+}
+
+.recent-file-icon.powerpoint {
+  background-color: #D24726;
+}
+
+.recent-file-icon.default {
+  background-color: var(--color-gray-700);
+}
+
+.recent-file-icon-letter {
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.recent-file-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.recent-file-name {
+  font-size: 0.75rem;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.recent-file-details {
+  font-size: 0.7rem;
+  color: var(--color-gray-500);
+  margin-top: 0.15rem;
+}
+
+.recent-file-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.recent-file-action {
+  padding: 0.375rem;
+  background: none;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recent-file-action:hover {
+  background-color: var(--color-gray-100);
+}
