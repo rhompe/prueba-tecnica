@@ -1,5 +1,5 @@
 import React from 'react';
-import { Scale, Video, FileText, FileCheck, Users, Laptop } from 'lucide-react';
+import { Scale, Video, FileText, FileCheck, Users, Laptop, Search } from 'lucide-react';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import Header from '../../components/Header/Header';
 import StatsCards from '../../components/StatsCards/StatsCards';
@@ -30,6 +30,16 @@ const Dashboard = () => {
 
       <div className="dashboard-main">
         <Header usuario={usuario} />
+
+        {/* MOBILE SEARCH BAR - Solo visible en móvil */}
+        <div className="dashboard-mobile-search">
+          <Search size={18} className="dashboard-mobile-search-icon" />
+          <input
+            type="text"
+            placeholder="Buscar"
+            className="dashboard-mobile-search-input"
+          />
+        </div>
 
         {/* Welcome Banner */}
         <div className="dashboard-banner">
