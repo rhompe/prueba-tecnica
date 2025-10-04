@@ -17,49 +17,49 @@
   "tareasPendientes": [
     {
       "id": 1,
-      "nombre": "Nombre de la actividad ABCDE, 123",
+      "nombre": " ABCDE, 123",
       "status": "Urgente",
       "fechaLimite": "Mié, 26 marzo",
       "tiempoDedicado": "2 hrs"
     },
     {
       "id": 2,
-      "nombre": "Nombre de la actividad ABCDE, 123",
+      "nombre": " ABCDE, 123",
       "status": "Urgente",
       "fechaLimite": "Mié, 26 marzo",
       "tiempoDedicado": "2 hrs"
     },
     {
       "id": 3,
-      "nombre": "Nombre de la actividad ABCDE, 123",
+      "nombre": "ABCDE, 123",
       "status": "Urgente",
       "fechaLimite": "Mié, 26 marzo",
       "tiempoDedicado": "2 hrs"
     },
     {
       "id": 4,
-      "nombre": "Nombre de la actividad ABCDE, 123",
+      "nombre": " ABCDE, 123",
       "status": "Urgente",
       "fechaLimite": "Mié, 26 marzo",
       "tiempoDedicado": "2 hrs"
     },
     {
       "id": 5,
-      "nombre": "Nombre de la actividad ABCDE, 123",
+      "nombre": " ABCDE, 123",
       "status": "Urgente",
       "fechaLimite": "Mié, 26 marzo",
       "tiempoDedicado": "2 hrs"
     },
     {
       "id": 6,
-      "nombre": "Nombre de la actividad ABCDE, 123",
+      "nombre": " ABCDE, 123",
       "status": "Urgente",
       "fechaLimite": "Mié, 26 marzo",
       "tiempoDedicado": "2 hrs"
     },
     {
       "id": 7,
-      "nombre": "Nombre de la actividad ABCDE, 123",
+      "nombre": " ABCDE, 123",
       "status": "Urgente",
       "fechaLimite": "Mié, 26 marzo",
       "tiempoDedicado": "2 hrs"
@@ -124,7 +124,7 @@
       "nombre": "Informe Financiero.xlsx",
       "tamano": "890 KB",
       "fecha": "de Marzo 10/03",
-      "tipo": "excel"
+      "tipo": "pdf"
     },
     {
       "id": 5,

@@ -99,3 +99,89 @@
   color: var(--color-gray-900);
   line-height: 1.3;
 }
+
+/* MÓVIL */
+@media (max-width: 768px) {
+  .tasks-table-container {
+    border: 1px solid var(--color-gray-200);
+  }
+
+  .tasks-table-header {
+    padding: 1rem;
+  }
+
+  .tasks-table-title {
+    font-size: 0.9375rem;
+  }
+
+  .tasks-table-view-all {
+    font-size: 0.8125rem;
+  }
+
+  /* Scroll horizontal para ver todas las columnas */
+  .tasks-table-scroll {
+    overflow-x: auto;
+    overflow-y: auto;
+    max-height: 400px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Hacer la tabla más ancha para forzar scroll */
+  .tasks-table {
+    min-width: 800px;
+  }
+
+  .tasks-table td {
+    padding: 0.625rem 1rem;
+  }
+
+  /* Avatar visible */
+  .tasks-table-avatar {
+    width: 36px;
+    height: 36px;
+  }
+
+  /* Hacer que las primeras columnas se vean más juntas */
+  .tasks-table td:nth-child(1) {
+    position: sticky;
+    left: 0;
+    background-color: white;
+    z-index: 1;
+    padding-right: 0.5rem;
+  }
+
+  .tasks-table td:nth-child(2) {
+    min-width: 150px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .tasks-table td:nth-child(3) {
+    min-width: 80px;
+    padding-left: 0.5rem;
+  }
+
+  .tasks-table-label {
+    font-size: 0.6875rem;
+  }
+
+  .tasks-table-value {
+    font-size: 0.8125rem;
+  }
+
+  .tasks-table-status-value {
+    font-size: 0.8125rem;
+  }
+
+  /* Indicador visual de scroll */
+  .tasks-table-scroll::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 30px;
+    background: linear-gradient(to left, rgba(255,255,255,0.9), transparent);
+    pointer-events: none;
+  }
+}
