@@ -1,7 +1,7 @@
 .tasks-table-container {
   background-color: white;
   border-radius: 0.75rem;
-  border: 1px solid var(--color-slate-800);
+  border: 1px solid #08325B;
 }
 
 .tasks-table-header {
@@ -15,12 +15,12 @@
 .tasks-table-title {
   font-size: 1.125rem;
   font-weight: bold;
-  color: var(--color-slate-800);
+  color: #08325B;
 }
 
 .tasks-table-view-all {
   font-size: 0.875rem;
-  color: var(--color-slate-800);
+  color: #08325B;
   background: none;
   border: none;
   cursor: pointer;

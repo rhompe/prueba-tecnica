@@ -7,10 +7,7 @@ const RecentFiles = ({ archivos }) => {
   const getFileIcon = (tipo) => {
     const iconos = {
       'word': { bg: 'word', letra: 'W' },
-      'pdf': { bg: 'pdf', letra: 'PDF' },
-      'excel': { bg: 'excel', letra: 'XLS' },
-      'powerpoint': { bg: 'powerpoint', letra: 'PPT' },
-      'default': { bg: 'default', letra: '📄' }
+      'pdf': { bg: 'pdf', letra: 'PDF' }
     };
     
     return iconos[tipo] || iconos['default'];

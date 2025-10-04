@@ -1,7 +1,7 @@
 .recent-files {
   background-color: white;
   border-radius: 0.75rem;
-  border: 1px solid var(--color-slate-800);
+  border: 1px solid #08325B;
 }
 
 .recent-files-header {
@@ -15,7 +15,7 @@
 .recent-files-title {
   font-size: 0.875rem;
   font-weight: bold;
-  color: var(--color-slate-800);
+  color: #08325B;
 }
 
 .recent-files-view-all {

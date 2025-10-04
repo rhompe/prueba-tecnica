@@ -1,7 +1,7 @@
 .calendar-widget {
   background-color: white;
   border-radius: 0.75rem;
-  border: 1px solid var(--color-slate-800);
+  border: 1px solid #08325B;
 }
 
 .calendar-header {
@@ -15,7 +15,7 @@
 .calendar-title {
   font-size: 0.875rem;
   font-weight: bold;
-  color: var(--color-slate-800);
+  color: #08325B;
 }
 
 .calendar-button {
@@ -83,8 +83,8 @@
 
 .calendar-event-content.active {
   background-color: #e2e8f0;
-  border: 2px solid var(--color-slate-800);
-  box-shadow: 0 2px 4px rgba(30, 41, 59, 0.1);
+  border: 2px solid #08325B;
+  box-shadow: 0 2px 4px rgba(8, 50, 91, 0.1);
   padding: 0.8125rem 0.9375rem;
 }
 
