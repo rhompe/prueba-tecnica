@@ -1,25 +1,17 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo } from 'react';
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 import moment from 'moment';
 import 'moment/locale/es';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
-import './CalendarWidget.css';
+import './CalendarioReuniones.css';
 import eventosData from '../../data/eventos.json';
 
 moment.locale('es');
 const localizer = momentLocalizer(moment);
 
-const CalendarWidget = () => {
+const CalendarioReuniones = () => {
   const [view, setView] = useState('day');
   const [date, setDate] = useState(new Date());
-  const [currentTime, setCurrentTime] = useState(new Date());
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentTime(new Date());
-    }, 60000);
-    return () => clearInterval(timer);
-  }, []);
 
   const eventos = useMemo(() => {
     return eventosData.eventos.map(evento => ({
@@ -31,16 +23,17 @@ const CalendarWidget = () => {
     }));
   }, []);
 
+  const horaActual = new Date();
+
   const eventStyleGetter = (event) => {
     const style = {
       backgroundColor: event.color || '#E8E8E8',
-      borderRadius: '6px',
+      borderRadius: '8px',
       border: '1px solid #D0D0D0',
       color: '#333',
-      padding: '3px 5px',
-      fontSize: '0.65rem',
-      fontWeight: '500',
-      lineHeight: '1.1'
+      padding: '8px',
+      fontSize: '14px',
+      fontWeight: '500'
     };
     return { style };
   };
@@ -80,8 +73,8 @@ const CalendarWidget = () => {
     const horaFin = 21;
     const horasTotales = horaFin - horaInicio;
     
-    const horaActualHoras = currentTime.getHours();
-    const horaActualMinutos = currentTime.getMinutes();
+    const horaActualHoras = horaActual.getHours();
+    const horaActualMinutos = horaActual.getMinutes();
     
     if (horaActualHoras < horaInicio || horaActualHoras >= horaFin) {
       return -100;
@@ -98,21 +91,23 @@ const CalendarWidget = () => {
   const mostrarLineaActual = posicionHoraActual >= 0 && posicionHoraActual <= 100;
 
   return (
-    <div className="calendar-widget">
-      <div className="calendar-header">
-        <div>
-          <h2 className="calendar-title">Calendario</h2>
-          <div className="calendar-count">{reunionesDelDia} Reuniones</div>
+    <div className="calendario-container">
+      <div className="calendario-header">
+        <div className="calendario-titulo">
+          <h2>Calendario</h2>
+          <p className="reuniones-count">{reunionesDelDia} Reuniones</p>
         </div>
-        <button className="calendar-button" onClick={irAHoy}>
-          Hoy
-          <svg width="10" height="10" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4 6L8 10L12 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </button>
+        <div className="calendario-controles">
+          <button className="btn-hoy" onClick={irAHoy}>
+            Hoy
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 6L8 10L12 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </button>
+        </div>
       </div>
       
-      <div className="calendar-wrapper">
+      <div className="calendario-wrapper">
         <Calendar
           localizer={localizer}
           events={eventos}
@@ -120,7 +115,7 @@ const CalendarWidget = () => {
           date={date}
           onView={setView}
           onNavigate={setDate}
-          style={{ height: 280 }}
+          style={{ height: 600 }}
           eventPropGetter={eventStyleGetter}
           formats={formats}
           messages={messages}
@@ -138,7 +133,7 @@ const CalendarWidget = () => {
             style={{ top: `${posicionHoraActual}%` }}
           >
             <div className="current-time-label">
-              {moment(currentTime).format('HH:mm')}
+              {moment(horaActual).format('HH:mm')}
             </div>
           </div>
         )}
@@ -147,4 +142,4 @@ const CalendarWidget = () => {
   );
 };
 
-export default CalendarWidget;
+export default CalendarioReuniones;

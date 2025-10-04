@@ -1,0 +1,25 @@
+{
+  "eventos": [
+    {
+      "id": 1,
+      "titulo": "Sesión Inicial de Consulta / Estrategia de Caso \"Caso P\" #0059862",
+      "inicio": "2025-10-04T16:00:00",
+      "fin": "2025-10-04T17:00:00",
+      "color": "#F0F0F0"
+    },
+    {
+      "id": 2,
+      "titulo": "Mesa Redonda de Mejora Continua",
+      "inicio": "2025-10-04T17:30:00",
+      "fin": "2025-10-04T18:00:00",
+      "color": "#F0F0F0"
+    },
+    {
+      "id": 3,
+      "titulo": "Conferencia de Arbitraje Legal",
+      "inicio": "2025-10-04T19:00:00",
+      "fin": "2025-10-04T20:00:00",
+      "color": "#F0F0F0"
+    }
+  ]
+}

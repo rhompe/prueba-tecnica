@@ -2,27 +2,30 @@
   background-color: white;
   border-radius: 0.75rem;
   border: 1px solid #08325B;
+  max-height: 420px;
+  overflow: hidden;
 }
 
 .calendar-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1.25rem;
+  padding: 0.65rem 0.9rem;
   border-bottom: 1px solid var(--color-gray-200);
 }
 
 .calendar-title {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: bold;
   color: #08325B;
+  margin: 0;
 }
 
 .calendar-button {
-  padding: 0.375rem 0.75rem;
-  background-color: var(--color-slate-800);
+  padding: 0.3rem 0.6rem;
+  background-color: #2d3748;
   color: white;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   border: none;
   border-radius: 0.375rem;
   cursor: pointer;
@@ -33,70 +36,218 @@
 }
 
 .calendar-button:hover {
-  background-color: var(--color-slate-900);
-}
-
-.calendar-content {
-  padding: 1rem 1.25rem 1.25rem;
+  background-color: #1a202c;
 }
 
 .calendar-count {
-  font-size: 0.75rem;
-  color: var(--color-gray-500);
-  margin-bottom: 1rem;
-}
-
-.calendar-events-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.calendar-event-item {
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-}
-
-.calendar-event-time {
-  font-size: 0.75rem;
-  color: var(--color-gray-600);
-  font-weight: 500;
-  min-width: 50px;
-  padding-top: 0.75rem;
-  flex-shrink: 0;
-}
-
-.calendar-event-content {
-  flex: 1;
-  background-color: white;
-  border: 1px solid var(--color-gray-200);
-  border-radius: 0.5rem;
-  padding: 0.875rem 1rem;
-  transition: all 0.2s;
-}
-
-.calendar-event-content:hover {
-  border-color: var(--color-gray-300);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-}
-
-.calendar-event-content.active {
-  background-color: #e2e8f0;
-  border: 2px solid #08325B;
-  box-shadow: 0 2px 4px rgba(8, 50, 91, 0.1);
-  padding: 0.8125rem 0.9375rem;
-}
-
-.calendar-event-title {
-  font-size: 0.8125rem;
-  line-height: 1.4;
-  color: var(--color-gray-900);
-  font-weight: 500;
-}
-
-.calendar-event-case {
   font-size: 0.7rem;
-  color: var(--color-gray-500);
-  margin-top: 0.35rem;
+  color: #666;
+  margin-top: 2px;
+}
+
+.calendar-wrapper {
+  position: relative;
+  padding: 0.6rem;
+}
+
+/* Estilos MUY compactos de React Big Calendar */
+.calendar-widget .rbc-calendar {
+  font-family: inherit;
+  font-size: 0.7rem;
+}
+
+.calendar-widget .rbc-time-view {
+  border: none;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.calendar-widget .rbc-time-header {
+  display: none !important;
+}
+
+.calendar-widget .rbc-time-content {
+  border: none;
+}
+
+.calendar-widget .rbc-time-gutter {
+  width: 42px !important;
+}
+
+.calendar-widget .rbc-timeslot-group {
+  min-height: 24px !important;
+  max-height: 24px !important;
+}
+
+.calendar-widget .rbc-time-slot {
+  border-top: 1px solid #f3f4f6;
+  min-height: 24px !important;
+}
+
+.calendar-widget .rbc-label {
+  font-size: 0.625rem;
+  color: #6b7280;
+  font-weight: 400;
+  padding-right: 5px;
+  line-height: 1;
+}
+
+.calendar-widget .rbc-day-slot {
+  background: #fafafa;
+}
+
+.calendar-widget .rbc-events-container {
+  margin-right: 0 !important;
+}
+
+.calendar-widget .rbc-event {
+  background: #f5f5f5 !important;
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 4px !important;
+  padding: 3px 5px !important;
+  font-size: 0.65rem !important;
+  color: #1a1a1a !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) !important;
+  margin-left: 2px !important;
+  margin-right: 2px !important;
+  line-height: 1.1 !important;
+}
+
+.calendar-widget .rbc-event-content {
+  font-weight: 500;
+  line-height: 1.1;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.calendar-widget .rbc-event-label {
+  display: none;
+}
+
+.calendar-widget .rbc-current-time-indicator {
+  display: none;
+}
+
+/* Línea de hora actual compacta */
+.calendar-widget .current-time-indicator {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #3b82f6;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.calendar-widget .current-time-indicator::before {
+  content: '';
+  position: absolute;
+  left: 42px;
+  top: -3px;
+  width: 6px;
+  height: 6px;
+  background: #3b82f6;
+  border-radius: 50%;
+}
+
+.calendar-widget .current-time-label {
+  position: absolute;
+  left: 5px;
+  top: -9px;
+  background: #3b82f6;
+  color: white;
+  font-size: 9px;
+  font-weight: 600;
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+.calendar-widget .rbc-time-column {
+  background: white;
+}
+
+.calendar-widget .rbc-today {
+  background-color: transparent;
+}
+
+.calendar-widget .rbc-event:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  transform: translateY(-1px);
+  transition: all 0.2s ease;
+}
+
+/* Reducir espacio entre horas */
+.calendar-widget .rbc-time-content > * + * > * {
+  border-left: none;
+}
+
+.calendar-widget .rbc-day-slot .rbc-time-slot {
+  border-top: 1px solid #f3f4f6;
+}
+
+/* Ajustes responsive para dashboard */
+@media (max-width: 1280px) {
+  .calendar-widget {
+    max-height: 380px;
+  }
+  
+  .calendar-wrapper {
+    padding: 0.5rem;
+  }
+  
+  .calendar-widget .rbc-time-gutter {
+    width: 38px !important;
+  }
+  
+  .calendar-widget .rbc-label {
+    font-size: 0.6rem;
+  }
+  
+  .calendar-widget .rbc-event {
+    font-size: 0.625rem !important;
+    padding: 2px 4px !important;
+  }
+  
+  .calendar-widget .rbc-timeslot-group {
+    min-height: 22px !important;
+    max-height: 22px !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .calendar-widget {
+    max-height: none;
+  }
+  
+  .calendar-widget .rbc-timeslot-group {
+    min-height: 28px !important;
+    max-height: 28px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .calendar-header {
+    padding: 0.625rem 0.875rem;
+  }
+  
+  .calendar-wrapper {
+    padding: 0.5rem;
+  }
+  
+  .calendar-widget .rbc-time-gutter {
+    width: 40px !important;
+  }
+  
+  .calendar-widget .rbc-timeslot-group {
+    min-height: 32px !important;
+    max-height: 32px !important;
+  }
+  
+  .calendar-widget .rbc-event {
+    font-size: 0.7rem !important;
+  }
 }

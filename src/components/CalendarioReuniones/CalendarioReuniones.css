@@ -1,0 +1,206 @@
+.calendario-container {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+.calendario-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.calendario-titulo h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.reuniones-count {
+  margin: 4px 0 0 0;
+  font-size: 14px;
+  color: #666;
+  font-weight: 400;
+}
+
+.calendario-controles {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-hoy {
+  background: #2d3748;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s;
+}
+
+.btn-hoy:hover {
+  background: #1a202c;
+}
+
+.btn-hoy svg {
+  width: 14px;
+  height: 14px;
+}
+
+.calendario-wrapper {
+  position: relative;
+}
+
+.rbc-calendar {
+  font-family: inherit;
+}
+
+.rbc-time-view {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.rbc-time-header {
+  display: none !important;
+}
+
+.rbc-time-content {
+  border: none;
+}
+
+.rbc-time-gutter {
+  width: 70px !important;
+}
+
+.rbc-timeslot-group {
+  min-height: 60px;
+  border-left: none;
+  border-right: 1px solid #e5e7eb;
+}
+
+.rbc-time-slot {
+  border-top: 1px solid #f3f4f6;
+}
+
+.rbc-label {
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 400;
+  padding-right: 12px;
+}
+
+.rbc-day-slot {
+  background: #fafafa;
+}
+
+.rbc-events-container {
+  margin-right: 0 !important;
+}
+
+.rbc-event {
+  background: #f5f5f5 !important;
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 8px !important;
+  padding: 10px 12px !important;
+  font-size: 14px !important;
+  color: #1a1a1a !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+  margin-left: 4px !important;
+  margin-right: 4px !important;
+}
+
+.rbc-event-content {
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.rbc-event-label {
+  display: none;
+}
+
+.rbc-current-time-indicator {
+  display: none;
+}
+
+.current-time-indicator {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #3b82f6;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.current-time-indicator::before {
+  content: '';
+  position: absolute;
+  left: 70px;
+  top: -4px;
+  width: 8px;
+  height: 8px;
+  background: #3b82f6;
+  border-radius: 50%;
+}
+
+.current-time-label {
+  position: absolute;
+  left: 8px;
+  top: -10px;
+  background: #3b82f6;
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .calendario-container {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .calendario-titulo h2 {
+    font-size: 24px;
+  }
+
+  .rbc-time-gutter {
+    width: 60px !important;
+  }
+
+  .btn-hoy {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+}
+
+.rbc-time-column {
+  background: white;
+}
+
+.rbc-today {
+  background-color: transparent;
+}
+
+.rbc-off-range-bg {
+  background: #f9fafb;
+}
+
+.rbc-event:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.12) !important;
+  transform: translateY(-1px);
+  transition: all 0.2s ease;
+}
