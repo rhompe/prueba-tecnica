@@ -68,12 +68,18 @@ const Dashboard = () => {
                 <StatsCards estadisticas={estadisticas} />
               </div>
 
+              {/* Calendario y Archivos (en tablet van aquí) */}
+              <div className="dashboard-right-column">
+                <CalendarWidget reuniones={reuniones} />
+                <RecentFiles archivos={archivosRecientes} />
+              </div>
+
               {/* Tareas Pendientes */}
               <TasksTable tareas={tareasPendientes} />
             </div>
 
-            {/* COLUMNA DERECHA (1/3) */}
-            <div className="dashboard-right-column">
+            {/* COLUMNA DERECHA (1/3) - Solo Desktop */}
+            <div className="dashboard-right-column dashboard-right-column-desktop">
               <CalendarWidget reuniones={reuniones} />
               <RecentFiles archivos={archivosRecientes} />
             </div>
